@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/logo.png" type="image/x-icon" />
+    <title>IshowKost - Cari, Bayar,Sewa Kost Impianmu Secara Online</title>
+    <!-- Google font-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAsowme css start  -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.css">
+
+    <!-- Themify icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/themify.css">
+    <!-- ratio start -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/ratio.css">
+
+    <!-- Feather icon-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/feather-icon.css">
+    <!-- Plugins css start-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/scrollbar.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/animate.css">
+    <!-- Plugins css Ends-->
+    <!-- datepicker -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/date-picker.css">
+    <!-- Bootstrap css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vendors/bootstrap.css">
+    <!-- vector map css start -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/vector-map.css">
+    <!-- vector map css start -->
+    <!-- slick slider-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick-theme.css">
+    <!-- App css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <!-- Responsive css-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+</head>
+
+<body>
+
+
+    <!-- pre-loader start -->
+    <div class="loader-wrapper">
+        <img src="../assets/images/loader/loader.gif" alt="loader gif">
+    </div>
+    <!-- pre-loader End -->
+
+    <!-- tap on top starts-->
+    <div class="tap-top"><i data-feather="chevrons-up"></i></div>
+    <!-- tap on tap ends-->
+    <!-- page-wrapper Start-->
+    <div class="page-wrapper compact-wrapper modern-type" id="pageWrapper">
+        <!-- Page Header Start-->
+        <div class="page-header">
+            <div class="header-wrapper row m-0">
+
+                <div class="header-logo-wrapper col-auto p-0">
+                    <div class="logo-wrapper"><a href="index.html"><img class="img-fluid main-logo"
+                                src="../assets/images/logo/logo.png" alt="logo">
+                            <img class="img-fluid white-logo" src="../assets/images/logo/logo-white.png" alt="logo"></a>
+                    </div>
+                    <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle"
+                            data-feather="align-center"></i>
+                    </div>
+                </div>
+
+                <form class="form-inline search-full col " action="index.html#" method="get">
+                    <div class="form-group w-100">
+                        <div class="Typeahead Typeahead--twitterUsers">
+                            <div class="u-posRelative">
+                                <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
+                                    placeholder="Search .." name="q" title="" autofocus>
+                                <i class="close-search" data-feather="x"></i>
+                                <div class="spinner-border Typeahead-spinner" role="status"><span
+                                        class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                            <div class="Typeahead-menu"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="nav-right col-4 pull-right right-header p-0">
+                    <ul class="nav-menus">
+
+                        <li> <span class="header-search"><i data-feather="search"></i></span></li>
+                        <li>
+                            <div class="mode"><i class="fa fa-moon-o" aria-hidden="true"></i>
+                            </div>
+                        </li>
+
+                       
+                        <li class="maximize"><a class="text-dark" href="index.html#!" onclick="javascript:toggleFullScreen()"><i
+                                    data-feather="maximize"></i></a></li>
+                        <li class="profile-nav onhover-dropdown pe-0 me-0">
+                            <div class="media profile-media">
+                                <img class="user-profile rounded-circle" src="../assets/images/users/4.jpg"
+                                    alt="profile-picture">
+                                <div class="user-name-hide media-body"><span>Owner</span>
+                                    <p class="mb-0 font-roboto">owner <i class="middle fa fa-angle-down"></i></p>
+                                </div>
+                            </div>
+                            <ul class="profile-dropdown onhover-show-div">
+                                <li><a href="index.html#"><i data-feather="user"></i><span>Account </span></a></li>
+                                <li><a href="index.html#"><i data-feather="mail"></i><span>Inbox</span></a></li>
+                                <li><a href="index.html#"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
+                                <li><a href="index.html#"><i data-feather="settings"></i><span>Settings</span></a></li>
+                                <li><a data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                        href="javascript:void(0)"><i data-feather="log-out"> </i><span>Log
+                                            out</span></a></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <script class="result-template" type="text/x-handlebars-template">
+            <div class="ProfileCard u-cf">                        
+            <div class="ProfileCard-avatar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay m-0"><path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path><polygon points="12 15 17 21 7 21 12 15"></polygon></svg></div>
+            <div class="ProfileCard-details">
+            <div class="ProfileCard-realName">{{name}}</div>
+            </div>
+            </div>
+        </script>
+                <script class="empty-template"
+                    type="text/x-handlebars-template"><div class="EmptyMessage">Your search turned up 0 results. This most likely means the backend is down, yikes!</div></script>
+            </div>
+        </div>
+        <!-- Page Header Ends -->
+        <!-- Page Body Start-->
+        <div class="page-body-wrapper">
+            <!-- Page Sidebar Start-->
+            <div class="sidebar-wrapper">
+                <div>
+                    <div class="logo-wrapper">
+                        <span class="back">Back</span>
+                        <div class="back-btn"><i class="fa fa-angle-left"></i></div>
+                        <div class="toggle-sidebar"><i class="status_toggle middle sidebar-toggle" data-feather="grid">
+                            </i></div>
+                    </div>
+                    <div class="logo-icon-wrapper"><a href="index.html"><img class="img-fluid"
+                                src="../assets/images/logo/logo-icon.png" alt=""></a></div>
+                    <nav class="sidebar-main">
+                        <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
+                        <div id="sidebar-menu">
+                            <ul class="sidebar-links" id="simple-bar">
+                                <li class="back-btn"><a href="index.html"><img class="img-fluid"
+                                            src="../assets/images/logo/logo-icon.png" alt=""></a>
+                                    <div class="mobile-back text-end"><span>Back</span><i class="fa fa-angle-right ps-2"
+                                            aria-hidden="true"></i></div>
+                                </li>
+
+                                <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
+                                        href="index.html"><i data-feather="home"> </i><span>Dashboard</span></a></li>
+
+                                <li class="sidebar-list">
+                                    <a class="linear-icon-link sidebar-link sidebar-title" href="index.html#"><i
+                                            data-feather="briefcase"></i><span>Kost
+                                        </span></a>
+                                    <ul class="sidebar-submenu">
+                                        <li><a href="all-kost.html">All Kost</a></li>
+                                        <li><a href="add-new-kost.html">Add New Kost</a></li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
+                                        href="reviews.html"><i data-feather="message-square">
+                                        </i><span>Reviews</span></a></li>
+                                <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
+                                        href="setting.html"><i data-feather="settings"> </i><span>Setting</span></a>
+                                </li>
+                                <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
+                                        href="login.html"><i data-feather="log-in"> </i><span>Log In</span></a>
+                                </li>
+
+                                <li class="sidebar-list"><a class="sidebar-link sidebar-title link-nav"
+                                        href="sign-up.html"><i data-feather="plus-circle"> </i><span>Register</span></a>
+                                </li>
+
+
+
+                            </ul>
+                        </div>
+                        <div class="right-arrow" id="right-arrow"><i data-feather="arrow-right"></i></div>
+                    </nav>
+                </div>
+            </div>
+            <!-- Page Sidebar Ends-->
+            <div class="page-body">
+
+                <!-- Container-fluid starts-->
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- chart caard section start -->
+                        <div class="col-sm-6 col-xxl-3 col-lg-6">
+                            <div class="b-b-primary border-5 border-0 card o-hidden">
+                                <div class="custome-1-bg b-r-4 card-body">
+                                    <div class="media align-items-center static-top-widget">
+
+                                        <div class="media-body p-0">
+                                            <span class="m-0">Total Komisi</span>
+                                            <h4 class="mb-0 counter">Rp10.000.000
+                                                <span class="badge badge-light-primary grow  "><i
+                                                        data-feather="trending-up">
+                                                    </i>8.5%</span>
+                                            </h4>
+
+                                        </div>
+                                        <div class="align-self-center text-center"><i data-feather="database"></i></div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xxl-3 col-lg-6">
+                            <div class="b-b-danger border-5  border-0 card o-hidden">
+                                <div class=" custome-2-bg  b-r-4 card-body">
+                                    <div class="media static-top-widget">
+
+                                        <div class="media-body p-0"><span class="m-0">Total Booking</span>
+                                            <h4 class="mb-0 counter">103
+                                                <span class="badge badge-light-danger grow  "><i
+                                                        data-feather="trending-down">
+                                                    </i>8.5%</span>
+                                            </h4>
+
+                                        </div>
+                                        <div class="align-self-center text-center"><i data-feather="shopping-bag"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xxl-3 col-lg-6">
+                            <div class="b-b-secondary border-5 border-0  card o-hidden">
+                                <div class=" custome-3-bg b-r-4 card-body">
+                                    <div class="media static-top-widget">
+
+                                        <div class="media-body p-0"><span class="m-0">Reviews</span>
+                                            <h4 class="mb-0 counter">80
+                                                <span class="badge badge-light-secondary grow  "><i
+                                                        data-feather="trending-up">
+                                                    </i>8.5%</span>
+                                            </h4>
+
+                                        </div>
+                                        <div class="align-self-center text-center"><i data-feather="message-circle"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- chart caard section start -->
+                        <!-- visitors chart  start-->
+                        <div class="col-xl-4">
+                            <div class="h-100">
+                                <div class="card o-hidden  ">
+                                    <div class="card-header">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <div class="card-header-title">
+                                                <h4>Visitors </h4>
+
+                                            </div>
+                                            <div class="dropdown">
+                                                <button class="btn dropdown-toggle" id="dropdownMenuButton"
+                                                    type="button" data-bs-toggle="dropdown"
+                                                    aria-expanded="false">Weekly</button>
+                                                <div class="dropdown-menu dropdown-menu-end"
+                                                    aria-labelledby="dropdownMenuButton"><a class="dropdown-item"
+                                                        href="index.html#">Weekly</a><a class="dropdown-item"
+                                                        href="index.html#">Monthly</a><a class="dropdown-item" href="index.html#">Yearly</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="pie-chart">
+                                            <div id="pie-chart-visitors"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- visitors chart  end-->
+                        <!-- Earning chart  star-->
+                        <div class="col-xl-8">
+                            <div class="card o-hidden ">
+                                <div class="card-header">
+
+                                    <div class="card-header-title">
+                                        <h4>Earning </h4>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <div id="bar-chart-earning"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Earning chart  end-->
+                        <!-- Booking history  start-->
+                        <div class="col-xxl-8">
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-header-title">
+                                        <h5>Booking History</h5>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive ">
+                                        <table class=" dashboard-table table border-0 ">
+
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="../assets/images/kos/62b0ab64-516.jpg" alt="tour 1"></td>
+                                                    <td><span class="fw-500"> Kost Apik Raya Candi</span><span>Campur</span></td>
+                                                    <td><span> </span></td>
+                                                    <td><span>                                                               
+                                                            </svg>02 November 2024</span>
+                                                    </td>
+                                                    <td><span></span>
+                                                        <span>1 Bulan </span>
+                                                    </td>
+                                                    <td><span>                                                               
+                                                            03 Desember 2024</span>
+                                                    </td>
+                                                    <td><span class="badge badge-primary">Active</span>
+                                                    </td>
+                                                    <td><span>2.300.000</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../assets/images/kos/kos7.png" alt="tour 2"></td>
+                                                    <td><span> Eksklusif Anhar Lowokwaru</span><span>Campur</span></td>
+                                                    <td></td>
+                                                    <td><span>04 Maret 2024</span>
+                                                    </td>
+                                                    <td><span></span>
+                                                        <span>3 Bulan</span>
+                                                    </td>
+                                                    <td><span>04 Juni 2024</span>
+                                                    </td>
+                                                    <td><span class="badge badge-secondary">Booked</span>
+                                                    <td><span>4.000.000</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../assets/images/kos/kos8.png" alt=""></td>
+                                                    <td><span class="fw-500"> Rabbani Syariah</span><span>Putri</span></td>
+                                                    <td></td>
+                                                        <td><span>07 Desember 2024</span>
+                                                        </td>
+                                                            <td><span></span>
+                                                                <span>1 Bulan</span>
+                                                            </td>
+                                                            <td><span>07 Januari 2025</span>
+                                                        </td>
+                                                            <td><span class="badge badge-secondary">Booked</span>
+                                                            <td><span>3.000.000</span>
+                                                    </td>                                                    
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="../assets/images/kos/kos6-transformed.jpeg" alt=""></td>
+                                                    <td><span class="fw-500"> Kost Riz Q Kemuning</span><span>Putri</span>
+                                                    </td>
+                                                    <td></td>
+                                                        <td><span>01 Januari 2025</span>
+                                                        </td>
+                                                            <td><span></span>
+                                                                <span>6 Bulan</span>
+                                                            </td>
+                                                            <td><span>01 Juni 2025</span>
+                                                        </td>
+                                                            <td><span class="badge badge-secondary">Booked</span>
+                                                            <td><span>12.210.000</span>
+                                                    </td>    
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Booking history  end-->
+
+                        <!-- datepicker start -->
+                        <div class="col-lg-6 col-xxl-4">
+                            <div class="datepicker-dashboard">
+                                <div class="datepicker-here" data-language="en"></div>
+                            </div>
+                        </div>
+                        <!-- datepicker start -->
+
+
+                        <!-- Traficks chart start -->
+                        <div class="col-lg-6">
+                            <div class="card ">
+                                <div class="d-flex align-items-center justify-content-between  card-header">
+                                    <div class="card-header-title">
+                                        <h5>Traffic</h5>
+                                    </div>
+
+
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <button class="btn btn-outline-light txt-dark " type="button"
+                                            data-bs-original-title="" title="">Day</button>
+                                        <button class="btn btn-outline-light txt-dark" type="button"
+                                            data-bs-original-title="" title="">Week</button>
+                                        <button class="btn btn-outline-light txt-dark active" type="button"
+                                            data-bs-original-title="" title="">Month</button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="traffic-chart"></div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- Traficks chart end -->
+                        <div class="col-xxl-6">
+                            <div class="card">
+                                <div class="card-header-title card-header">
+                                    <h5>World Map</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="jvector-map-height" id="world-map"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Container-fluid Ends-->
+            </div>
+        </div>
+
+    </div>
+    <!-- Modal -->
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog  modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h5 class="modal-title" id="staticBackdropLabel">Logging Out</h5>
+                    <p>Are you sure you want to log out?</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <div class="button-box">
+                        <button type="button" class="btn btn--no " data-bs-dismiss="modal">No</button>
+                        <button type="button" class="btn  btn--yes btn-primary">Yes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="customizer-links"></div> -->
+
+
+    <!-- latest jquery-->
+    <script src="../assets/js/jquery-3.5.1.min.js"></script>
+    <!-- Bootstrap js-->
+    <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- feather icon js-->
+    <script src="../assets/js/icons/feather-icon/feather.min.js"></script>
+    <script src="../assets/js/icons/feather-icon/feather-icon.js"></script>
+    <!-- scrollbar js-->
+    <script src="../assets/js/scrollbar/simplebar.js"></script>
+    <script src="../assets/js/scrollbar/custom.js"></script>
+    <!-- Sidebar jquery-->
+    <script src="../assets/js/config.js"></script>
+
+
+    <!-- tooltip init js  start-->
+    <script src="../assets/js/tooltip-init.js"></script>
+    <!-- tooltip init js  end-->
+
+    <!-- slick js start -->
+    <script src="../assets/js/slick.js"></script>
+    <!-- slick js end -->
+
+    <!-- Plugins JS start-->
+    <script src="../assets/js/sidebar-menu.js"></script>
+    <script src="../assets/js/notify/bootstrap-notify.min.js"></script>
+
+
+    <script src="../assets/js/notify/index.js"></script>
+    <script src="../assets/js/typeahead/handlebars.js"></script>
+    <script src="../assets/js/typeahead/typeahead.bundle.js"></script>
+    <script src="../assets/js/typeahead/typeahead.custom.js"></script>
+    <script src="../assets/js/typeahead-search/handlebars.js"></script>
+    <script src="../assets/js/typeahead-search/typeahead-custom.js"></script>
+    <!-- Plugins JS Ends-->
+
+    <script src="../assets/js/datepicker/date-picker/datepicker.js"></script>
+
+    <script src="../assets/js/datepicker/date-picker/datepicker.en.js"></script>
+
+    <script src="../assets/js/datepicker/date-picker/datepicker.custom.js"></script>
+    <!-- Apexchar js start -->
+
+    <script src="../assets/js/chart/apex-chart/moment.min.js"></script>
+    <script src="../assets/js/chart/apex-chart/apex-chart.js"></script>
+    <script src="../assets/js/chart/apex-chart/stock-prices.js"></script>
+    <script src="../assets/js/chart/apex-chart/chart-custom.js"></script>
+    <!-- Apexchar js start -->
+    <!-- ratio start  -->
+    <script src="../assets/js/ratio.js"></script>
+    <!-- vector map start -->
+    <!-- customizer js start  -->
+    <script src="../assets/js/customizer.js"></script>
+    <!-- customizer js start  -->
+    <script src="../assets/js/vector-map/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="../assets/js/vector-map/map/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="../assets/js/vector-map/map-vector.js"></script>
+    <!-- vector map end -->
+    <!-- Theme js-->
+    <script src="../assets/js/script.js"></script>
+
+    <!-- login js-->
+    <!-- Plugin used-->
+</body>
+
+</html>
